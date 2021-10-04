@@ -1,0 +1,18 @@
+import React from "react";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+
+function ColourTag({ text, textColor, percent, percentColor, color1, color2 }) {
+  return (
+    <div
+      style={{
+        background: `linear-gradient(80deg, ${color1} 40%, ${color2})`,
+      }}
+      className="colour-tag"
+    >
+      <div style={{ color: textColor }}>{text}</div>
+      <div style={{ color: percentColor, marginLeft: "1rem" }}>{percent}</div>
+    </div>
+  );
+}
+
+export default ColourTag;
