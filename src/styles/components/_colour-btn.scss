@@ -15,4 +15,9 @@
     max-width: 13rem;
     padding: 0.8rem 1rem;
   }
+  @media screen and (max-width: 450px) {
+    max-width: 9rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }

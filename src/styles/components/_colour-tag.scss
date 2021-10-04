@@ -12,12 +12,17 @@
   margin-right: 0.5rem;
 
   @media screen and (max-width: 450px) {
-    min-width: 39%;
-    padding: 0.8rem 1rem;
+    min-width: 43%;
+    padding: 0.8rem 0.5rem;
     flex-wrap: wrap;
     display: inline-flex;
   }
   @media screen and (max-width: 380px) {
-    min-width: 36%;
+    min-width: 40%;
+    padding: 0.8rem 0.5rem;
+  }
+
+  @media screen and (max-width: 330px) {
+    min-width: 38.5%;
   }
 }
