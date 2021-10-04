@@ -23,7 +23,7 @@
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
 
   @media screen and (min-width: 1300px) {

@@ -1,5 +1,4 @@
 import React from "react";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 function ColourTag({ text, textColor, percent, percentColor, color1, color2 }) {
   return (
