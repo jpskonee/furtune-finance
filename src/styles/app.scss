@@ -26,10 +26,16 @@ body {
   );
 }
 
+@import "./pages/index";
+@import "./pages/splash-modal";
 @import "./components/_home-banner.scss";
 @import "./components/header-text";
-@import "./components/index";
 @import "./components/desp-text";
 @import "./components/circle-img";
 @import "./components/colour-btn";
 @import "./components/colour-tag";
+@import "./components/splash-btn";
+@import "./components/image-slider";
+@import "./components/square-img-frame";
+@import "./components/team-card";
+@import "./components/footer";

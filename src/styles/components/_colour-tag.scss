@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -11,18 +11,24 @@
   margin-top: 0.5rem;
   margin-right: 0.5rem;
 
+  @media screen and (max-width: 770px) {
+    padding: 0.8rem 0.6rem;
+    flex-wrap: wrap;
+    display: inline-flex;
+  }
   @media screen and (max-width: 450px) {
-    min-width: 43%;
-    padding: 0.8rem 0.5rem;
+    min-width: 40%;
+    padding: 0.8rem 0.6rem;
     flex-wrap: wrap;
     display: inline-flex;
   }
   @media screen and (max-width: 380px) {
     min-width: 40%;
-    padding: 0.8rem 0.5rem;
+    padding: 0.8rem 0.6rem;
   }
 
   @media screen and (max-width: 330px) {
     min-width: 38.5%;
+    padding: 0.7rem 0.5rem;
   }
 }
