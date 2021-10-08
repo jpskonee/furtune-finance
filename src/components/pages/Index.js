@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Grid } from "@material-ui/core";
-import HomeBanner from "../shared/HomeBanner";
 import HeaderText from "../shared/HeaderText";
 import DespText from "../shared/DespText";
 import CircleImg from "../shared/CircleImg";
@@ -11,6 +10,8 @@ import TeamCard from "../shared/TeamCard";
 import FaqSection from "../shared/FaqSection";
 import Footer from "../shared/Footer";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import { FaDiscord } from "react-icons/fa";
+import HeroSection from "../shared/HeroSection";
 
 export default function Index() {
   const [openSplash, setOpenSplash] = useState(false);
@@ -25,26 +26,22 @@ export default function Index() {
 
   return (
     <div>
-      <div>
-        <HomeBanner />
+      <div className="hero-section">
+        {/* <HomeBanner /> */}
+        <HeroSection />
       </div>
-      <div className="welcome-div">
-        {/* <img
-          style={{ marginRight: "1rem" }}
-          src="/images/hand.png"
-          alt="hand"
-          className="hand-img"
-        /> */}
-        <HeaderText
-          text="👋 Soltar Welcomes you"
-          color="white"
-          align="center"
-        />
-      </div>
-      <div className="desp-div">
-        <DespText text="Join our 8888 uniquely generated, beautiful and collectible high quality fortune cookies with proof of ownership stored on the Solana blockchain." />
-      </div>
-
+      <Container style={{ background: "black", zIndex: "999" }} maxWidth="lg">
+        <div className="welcome-div">
+          <HeaderText
+            text="👋 Soltar Welcomes you"
+            color="white"
+            align="center"
+          />
+        </div>
+        <div className="desp-div">
+          <DespText text="Join our 8888 uniquely generated, beautiful and collectible high quality fortune cookies with proof of ownership stored on the Solana blockchain." />
+        </div>
+      </Container>
       <Container id="circle-img-div" maxWidth="lg">
         <CircleImg img="images/nft3.png" />
         <CircleImg img="images/nft4.png" />
@@ -52,18 +49,20 @@ export default function Index() {
         <CircleImg img="images/nft1.png" />
       </Container>
 
-      <div className="get-ready-div">
-        <HeaderText
-          text="Get ready for a Fair Launch"
-          color="white"
-          align="center"
-        />
-        <div className="get-ready-desp"> OCTOBER 16</div>
-        <DespText text="It's time to find out your luck with Soltar’s Fortune Cookies. You might discover how blessed you are sooner than expected, may those who mint be happy with abundant fortune and luck." />
-        <div className="get-ready-desp-2">
-          <DespText text="Owning a first generation fortune cookie will bring you lots of fortune with future airdrops, chances to win other NFTS, and the ability to crack your fortune cookie open and earn more rewards. Hold those fortunes tight and you will be blessed with good fortune" />
+      <Container maxWidth="lg">
+        <div className="get-ready-div">
+          <HeaderText
+            text="Get ready for a Fair Launch"
+            color="white"
+            align="center"
+          />
+          <div className="get-ready-desp"> OCTOBER 16</div>
+          <DespText text="It's time to find out your luck with Soltar’s Fortune Cookies. You might discover how blessed you are sooner than expected, may those who mint be happy with abundant fortune and luck." />
+          <div className="get-ready-desp-2">
+            <DespText text="Owning a first generation fortune cookie will bring you lots of fortune with future airdrops, chances to win other NFTS, and the ability to crack your fortune cookie open and earn more rewards. Hold those fortunes tight and you will be blessed with good fortune" />
+          </div>
         </div>
-      </div>
+      </Container>
       <Container id="shop-div" maxWidth="lg">
         <div id="shop-div-1">
           <HeaderText text="Trait Rarity " color="white" align="left" />
@@ -133,13 +132,14 @@ export default function Index() {
               textColor="black"
               color1="#fe50bf"
               color2="#ffb75a"
+              width="89%"
             />
           </div>
         </div>
         <div id="shop-div-2">
           <img
             className="cookie-stand"
-            src="images/FortuneCookie_.png"
+            src="images/Machine_v02.png"
             alt="Cookie stand"
           />
         </div>
@@ -150,17 +150,17 @@ export default function Index() {
             <HeaderText text="Team" color="white" align="left" />
             <div className="each-team">
               <TeamCard
-                color1="#45AD4A"
-                color2="#78C843"
-                img="images/nft2.png"
+                color1="#AE46A9"
+                color2="#842CE0"
+                img="images/nft1.png"
                 name="CookieKing"
               />
             </div>
             <div className="each-team img-right">
               <TeamCard
-                color1="#5299BB"
-                color2="#3ABAAB"
-                img="images/nft3.png"
+                color1="#45AD4A"
+                color2="#78C843"
+                img="images/nft2.png"
                 name="Fortune Teller"
               />
             </div>
@@ -174,9 +174,9 @@ export default function Index() {
             </div>
             <div className="each-team img-right">
               <TeamCard
-                color1="#AE46A9"
-                color2="#842CE0"
-                img="images/nft1.png"
+                color1="#5299BB"
+                color2="#3ABAAB"
+                img="images/nft3.png"
                 name="Soltars Assistant"
               />
             </div>
@@ -203,12 +203,16 @@ export default function Index() {
               rel="noreferrer"
             >
               <ColourBtn
-                icon={<TwitterIcon />}
-                text="/ Fortunefinance_"
+                icon={
+                  <TwitterIcon
+                    style={{ marginRight: "1rem", fontSize: "1.6rem" }}
+                  />
+                }
+                text="/Fortunefinance_"
                 textColor="black"
                 color1="#19C9FF"
                 color2="#19C9FF"
-                width="98%"
+                width="90%"
               />
             </a>
           </Grid>
@@ -220,12 +224,16 @@ export default function Index() {
               rel="noreferrer"
             >
               <ColourBtn
-                icon={<TwitterIcon />}
-                text="/ Fortunefinance_"
+                icon={
+                  <FaDiscord
+                    style={{ marginRight: "1rem", fontSize: "1.6rem" }}
+                  />
+                }
+                text="/Fortunefinance_"
                 textColor="black"
                 color1="#A962FF"
                 color2="#A962FF"
-                width="98%"
+                width="90%"
               />
             </a>
           </Grid>

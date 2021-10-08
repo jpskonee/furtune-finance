@@ -31,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
   summary: {
     background: "#1A2C34",
     color: "gray",
-    borderRadius: "1rem",
-    marginTop: "0.3rem",
+    borderRadius: "2rem",
+    marginTop: "0rem",
+    padding: "1rem 1.5rem",
   },
 }));
 

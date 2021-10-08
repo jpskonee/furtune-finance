@@ -3,7 +3,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 function ColourBtn({ width, text, icon, textColor, mt, color1, color2 }) {
   return (
-    <button
+    <div
       style={{
         background: `linear-gradient(80deg, ${color1} 40%, ${color2})`,
         color: textColor,
@@ -11,14 +11,14 @@ function ColourBtn({ width, text, icon, textColor, mt, color1, color2 }) {
       }}
       className="colour-btn"
     >
-      <div>
+      <div style={{ display: "flex", alignItems: "center" }}>
         {" "}
         {icon} {text}
       </div>
-      <div>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <ArrowForwardIcon />
       </div>
-    </button>
+    </div>
   );
 }
 
