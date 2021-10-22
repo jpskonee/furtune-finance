@@ -1,19 +1,74 @@
 .img-card {
   background: white;
-  display: inline-block;
+  // display: inline-block;
   padding: 0.8rem 0.8rem 0.5rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 0.5rem 0.8rem 0.5rem;
+  }
 
   .img-active {
     img {
-      height: 390px;
-      width: 400px;
+      height: 380px;
+      width: 390px;
+
+      @media screen and (min-width: 2500px) {
+        height: 570px;
+        width: 590px;
+      }
+
+      @media screen and (max-width: 1050px) {
+        height: 350px;
+        width: 370px;
+      }
+      @media screen and (max-width: 770px) {
+        height: 360px;
+        width: 370px;
+      }
+      @media screen and (max-width: 450px) {
+        height: 70vw;
+        width: 65vw;
+      }
+      @media screen and (max-width: 380px) {
+        height: 75vw;
+        width: 68vw;
+      }
+      @media screen and (max-width: 330px) {
+        height: 80vw;
+        width: 68vw;
+      }
     }
   }
 
   .img-passive {
     img {
       height: 300px;
-      width: 300px;
+      width: 240px;
+
+      @media screen and (min-width: 2500px) {
+        height: 480px;
+        width: 450px;
+      }
+      @media screen and (max-width: 1050px) {
+        height: 280px;
+        width: 220px;
+      }
+      @media screen and (max-width: 770px) {
+        height: 280px;
+        width: 230px;
+      }
+      @media screen and (max-width: 450px) {
+        height: 220px;
+        width: 190px;
+      }
+      @media screen and (max-width: 380px) {
+        height: 210px;
+        width: 190px;
+      }
+      @media screen and (max-width: 330px) {
+        height: 200px;
+        width: 170px;
+      }
     }
   }
 
@@ -23,14 +78,37 @@
     align-items: center;
     color: rgb(80, 78, 78);
     font-size: 01rem;
+
+    @media screen and (max-width: 770px) {
+      font-size: 0.9rem;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 0.8rem;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 0.6rem;
+    }
   }
   .img-detail2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: black;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    @media screen and (max-width: 770px) {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
 
     .img-detail-prop {
       color: #01abbf;

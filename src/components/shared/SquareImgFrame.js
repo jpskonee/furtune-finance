@@ -4,7 +4,7 @@ function SquareImgFrame({ img, attr, cat, name, props, state }) {
   return (
     <div className="img-card">
       <div className={state === "active" ? "img-active" : "img-passive"}>
-        <img src={`/images/nft${img}.png`} alt="" />
+        <img src={`/images/collections/${img}`} alt="" />
       </div>
       <div className="img-detail1">
         <div>{attr}</div>

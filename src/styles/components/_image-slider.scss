@@ -1,20 +1,26 @@
 .slider-cont {
   position: relative;
-  margin-left: 2rem;
-  margin-top: 2rem;
-
-  @media screen and (min-width: 3900px) {
+  margin-left: 0.5rem;
+  max-width: 630px;
+  --animate-duration: 2s;
+  --animate-delay: 0.9s;
+  // padding-right: 30%;
+  @media screen and (min-width: 2500px) {
   }
 
   @media screen and (max-width: 1050px) {
     margin-top: 2rem;
     margin-left: 0.5rem;
+    max-width: 600px;
   }
   @media screen and (max-width: 770px) {
     margin-top: 1rem;
-    margin-left: 0.5rem;
+    margin-left: 0rem;
+    padding-right: 0;
   }
   @media screen and (max-width: 450px) {
+    margin-left: 0;
+    margin-top: 2.5rem;
   }
   @media screen and (max-width: 380px) {
   }
@@ -24,30 +30,74 @@
 
   .active-div {
     position: absolute;
-    top: -0.5rem;
-    left: 14vw;
-  }
+    top: -0.3rem;
+    left: 7vw;
+    z-index: 999;
 
-  .passive-div {
-    opacity: 0.45;
-    margin-top: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    padding: 2rem 3rem;
-
-    @media screen and (min-width: 3900px) {
+    @media screen and (min-width: 2500px) {
+      left: 6.3vw;
     }
 
     @media screen and (max-width: 1050px) {
-      padding: 1rem 0.5rem;
+      left: 5.5rem;
     }
     @media screen and (max-width: 770px) {
+      top: -1rem;
+      left: 4.8rem;
     }
     @media screen and (max-width: 450px) {
+      left: 3.5rem;
     }
     @media screen and (max-width: 380px) {
+      left: 2.7rem;
+    }
+    @media screen and (max-width: 330px) {
+      left: 2.2rem;
+    }
+  }
+
+  .bouncing {
+    animation: bouncing 3s ease-in-out infinite alternate-reverse;
+  }
+
+  @keyframes bouncing {
+    from {
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+  .passive-div {
+    opacity: 0.4;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    max-width: 630px;
+    animation: passive 1s infinite alternate-reverse;
+    z-index: 10;
+
+    @media screen and (min-width: 2500px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 1050px) {
+      padding: 1.5rem 0rem;
+      width: 100%;
+    }
+    @media screen and (max-width: 770px) {
+      width: 95%;
+    }
+    @media screen and (max-width: 450px) {
+      opacity: 0.35;
+      min-width: 110%;
+      margin-left: -1rem;
+    }
+    @media screen and (max-width: 380px) {
+      margin-top: 1.5rem;
     }
 
     @media screen and (max-width: 330px) {
@@ -57,17 +107,173 @@
   .img-ctr-div {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
     position: absolute;
-    bottom: -55px;
-    z-index: 999;
-    width: 79%;
-    padding: 0 3rem;
+    bottom: -60px;
+    z-index: 800;
+    width: 100%;
+
+    @media screen and (min-width: 2500px) {
+      padding-top: 2rem;
+      bottom: -80px;
+      min-width: 58rem;
+    }
+
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+      bottom: -65px;
+    }
+    @media screen and (max-width: 770px) {
+      bottom: -60px;
+      width: 95%;
+    }
+    @media screen and (max-width: 450px) {
+      bottom: 110px;
+      min-width: 100%;
+    }
 
     .img-ctr {
       color: white;
       font-size: 3rem;
+
+      @media screen and (min-width: 2500px) {
+        font-size: 5rem;
+      }
+
+      @media screen and (max-width: 770px) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 2rem;
+      }
     }
+  }
+}
+
+//animations
+//when next is clicked
+//active div
+.active-move-left {
+  animation: moveLeft 0.4s linear none;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-159px, -20px) scale(0.75);
+  }
+}
+
+.active-restore-next {
+  animation: restoreActive 0.4s linear none;
+}
+
+@keyframes restoreActive {
+  from {
+    transform: translate(100px, -10px) scale(0.9);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+
+//passive left
+.passive-left-forward {
+  animation: passiveLeftF 0.4s none linear;
+}
+
+@keyframes passiveLeftF {
+  from {
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+}
+
+//passive right
+.passive-right-next {
+  animation: passiveRightNext 0.4s linear none;
+}
+
+@keyframes passiveRightNext {
+  from {
+    transform: translate(100px, 20px) scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50px, 10px) scale(1.2);
+    z-index: 999;
+    opacity: 0.8;
+  }
+}
+
+//when Prev is clicked
+//active div
+.active-move-right {
+  animation: moveRight 0.4s linear none;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(159px, 20px) scale(0.75);
+  }
+}
+.active-restore-prev {
+  animation: restorePrev 0.4s linear none;
+}
+
+@keyframes restorePrev {
+  from {
+    transform: translate(-100px, -10px) scale(0.9);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+
+//passive right
+.passive-right-forward {
+  animation: passiveRightF 0.4s none linear;
+}
+
+@keyframes passiveRightF {
+  from {
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+//passive Left
+.passive-left-prev {
+  animation: passiveLeftPrev 0.4s linear none;
+}
+
+@keyframes passiveLeftPrev {
+  from {
+    transform: translate(-100px, 20px) scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: translate(50px, 10px) scale(1.25);
+    z-index: 999;
+    opacity: 0.8;
   }
 }

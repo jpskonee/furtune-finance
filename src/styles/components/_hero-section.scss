@@ -57,33 +57,29 @@
 
     p {
       position: absolute;
-      top: 1.7rem;
+      top: 3rem;
       font-size: 1.2rem;
-      right: 3.6rem;
+      right: 3.5rem;
       color: white;
       font-weight: bold;
 
       @media screen and (max-width: 1050px) {
-        top: 1.7rem;
+        top: 2.6rem;
         font-size: 1rem;
-        right: 2.8rem;
+        right: 2.9rem;
       }
       @media screen and (max-width: 770px) {
-        top: 1.1rem;
+        top: 2rem;
         font-size: 0.8rem;
-        right: 2.4rem;
+        right: 2.5rem;
       }
       @media screen and (max-width: 450px) {
-        top: 4vw;
+        top: 6.2vw;
         font-size: 2.3vw;
-        right: 6.2vw;
+        right: 6vw;
       }
       @media screen and (max-width: 380px) {
-        top: 5vw;
-      }
-      @media screen and (max-width: 330px) {
-        top: 4.5vw;
-        right: 6.4 vw;
+        top: 7vw;
       }
     }
     img {

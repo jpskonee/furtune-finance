@@ -1,7 +1,16 @@
 import React from "react";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
-function ColourBtn({ width, text, icon, textColor, mt, color1, color2 }) {
+function ColourBtn({
+  width,
+  text,
+  icon,
+  textColor,
+  mt,
+  color1,
+  color2,
+  onClick,
+}) {
   return (
     <div
       style={{
@@ -10,6 +19,7 @@ function ColourBtn({ width, text, icon, textColor, mt, color1, color2 }) {
         minWidth: width,
       }}
       className="colour-btn"
+      onClick={onClick}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         {" "}

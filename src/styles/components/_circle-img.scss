@@ -1,9 +1,9 @@
 .circle-img {
   border-radius: 100%;
-  border: 0.6rem solid black;
   margin-right: -2.5rem;
   width: 320px;
   height: 320px;
+  background-color: black;
 
   @media screen and (max-width: 1050px) {
     width: 250px;

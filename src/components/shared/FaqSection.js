@@ -93,7 +93,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails className={classes.summary}>
           <Typography>
-            It is in October 16th. 4 PM EST. The price is 2 SOL
+            The date will be announced along with the price very shortly.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -197,7 +197,7 @@ export default function ControlledAccordions() {
         <AccordionDetails className={classes.summary}>
           <Typography>
             Yes. We have common, rare, extremely rare and mythic ranks across
-            137 different traits.
+            150+ different traits.
           </Typography>
         </AccordionDetails>
       </Accordion>

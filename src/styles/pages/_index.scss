@@ -258,6 +258,13 @@
 }
 
 .team-faq {
+  margin-top: 7rem;
+  @media screen and (max-width: 770px) {
+    margin-top: 4rem;
+  }
+  @media screen and (max-width: 450px) {
+    margin-top: 3rem;
+  }
   .team-div {
     @media screen and (max-width: 770px) {
       margin-left: 2.5rem;

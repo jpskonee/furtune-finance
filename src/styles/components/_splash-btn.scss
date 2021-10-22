@@ -2,10 +2,10 @@
   font-weight: 600;
   cursor: pointer;
   border-radius: 40px;
-  min-height: 30px;
   display: inline-flex;
   padding: 0.1rem;
   position: relative;
+  min-width: 100%;
 
   @media screen and (min-width: 2561px) {
   }
@@ -20,6 +20,16 @@
     width: 100%;
     border-radius: 3rem;
     font-size: 1rem;
+    padding: 0.5rem 1rem;
+
+    @media screen and (max-width: 1050px) {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.7rem;
+    }
+    @media screen and (max-width: 770px) {
+      font-size: 0.7rem;
+      padding: 0.6rem 0.7rem;
+    }
   }
 }
 
