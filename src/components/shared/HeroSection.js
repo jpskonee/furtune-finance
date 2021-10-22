@@ -35,7 +35,10 @@ const HeroSection = () => {
               />
             </div>
           </div>
-          <div className="hero-box">
+          <div
+            style={{ overflow: "hidden", display: "inline-block" }}
+            className="hero-box"
+          >
             <img alt="Hero-brick" src="/images/headerBox.png" />
           </div>
         </div>

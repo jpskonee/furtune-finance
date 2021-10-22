@@ -32,10 +32,10 @@ export default function Index() {
 
   return (
     <div>
-      <div className="hero-section">
+      <div style={{ overflowY: "hidden" }} className="hero-section">
         <HeroSection />
       </div>
-      <Container style={{ background: "black", zIndex: "999" }} maxWidth="lg">
+      <Container maxWidth="lg">
         <div className="welcome-div">
           <HeaderText
             text="👋 Soltar beckons you…"
@@ -47,7 +47,7 @@ export default function Index() {
           <DespText text="Try your luck, find your destiny, and gain good fortune by minting one of the 8,888 finely crafted recipes utilized by Soltar in his quest for the recipe of the tastiest and most powerful Fortune Cookie!" />
         </div>
       </Container>
-      <Container data-aos="flip-right" id="circle-img-div" maxWidth="lg">
+      <Container data-aos="fade-right" id="circle-img-div" maxWidth="lg">
         <CircleImg img="images/animated_nft4.png" />
         <CircleImg img="images/animated_nft3.png" />
         <CircleImg img="images/animated_nft2.png" />

@@ -1,7 +1,7 @@
 .slider-cont {
   position: relative;
   margin-left: 0.5rem;
-  max-width: 630px;
+  max-width: 700px;
   --animate-duration: 2s;
   --animate-delay: 0.9s;
   // padding-right: 30%;
@@ -28,10 +28,12 @@
   @media screen and (max-width: 330px) {
   }
 
-  .active-div {
+  .active-div,
+  .active-div-fake-R,
+  .active-div-fake-L {
     position: absolute;
     top: -0.3rem;
-    left: 7vw;
+    left: 9.2vw;
     z-index: 999;
 
     @media screen and (min-width: 2500px) {
@@ -76,7 +78,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
-    max-width: 630px;
+    max-width: 700px;
     animation: passive 1s infinite alternate-reverse;
     z-index: 10;
 
@@ -151,10 +153,23 @@
 }
 
 //animations
+
+.hide-fake {
+  display: none;
+  animation: hideFake 0.8s ease-out;
+  @keyframes hideFake {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
 //when next is clicked
 //active div
 .active-move-left {
-  animation: moveLeft 0.4s linear none;
+  animation: moveLeft 0.8s ease-in-out;
 }
 
 @keyframes moveLeft {
@@ -162,63 +177,62 @@
     transform: translate(0, 0) scale(1);
   }
   to {
-    transform: translate(-159px, -20px) scale(0.75);
+    transform: translate(-198px, -25.5px) scale(0.72);
   }
 }
 
-.active-restore-next {
-  animation: restoreActive 0.4s linear none;
+//active fake
+.active-fake-next {
+  animation: activeFakeNext 0.7s ease-in-out;
 }
 
-@keyframes restoreActive {
+@keyframes activeFakeNext {
   from {
-    transform: translate(100px, -10px) scale(0.9);
-    opacity: 0.3;
+    transform: translate(200px, 3px) scale(0.7);
+    opacity: 0.4;
   }
-
   to {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0, 0) scale(1);
     opacity: 1;
   }
 }
 
 //passive left
 .passive-left-forward {
-  animation: passiveLeftF 0.4s none linear;
+  animation: passiveLeftF 0.8s ease-in-out;
 }
 
 @keyframes passiveLeftF {
   from {
-    transform: translateX(0);
-    opacity: 0.3;
+    transform: scale(1) translateX(0);
+    opacity: 0;
   }
   to {
-    transform: translateX(150px);
-    opacity: 0;
+    transform: scale(0.2) translateX(20px);
+    opacity: 0.5;
   }
 }
 
 //passive right
 .passive-right-next {
-  animation: passiveRightNext 0.4s linear none;
+  animation: passiveRightNext 0.8s ease-in-out;
 }
 
 @keyframes passiveRightNext {
   from {
-    transform: translate(100px, 20px) scale(0.9);
-    opacity: 1;
+    transform: scale(0.2) translateX(150px);
+    opacity: 0.4;
   }
   to {
-    transform: translate(-50px, 10px) scale(1.2);
-    z-index: 999;
-    opacity: 0.8;
+    transform: scale(1) translateX(0);
+    opacity: 1;
   }
 }
 
 //when Prev is clicked
 //active div
 .active-move-right {
-  animation: moveRight 0.4s linear none;
+  animation: moveRight 0.8s ease-in-out;
 }
 
 @keyframes moveRight {
@@ -226,54 +240,54 @@
     transform: translate(0, 0) scale(1);
   }
   to {
-    transform: translate(159px, 20px) scale(0.75);
+    transform: translate(195px, -20px) scale(0.75);
   }
 }
-.active-restore-prev {
-  animation: restorePrev 0.4s linear none;
+
+//active fake
+.active-fake-prev {
+  animation: activeFakePrev 0.7s ease-in-out;
 }
 
-@keyframes restorePrev {
+@keyframes activeFakePrev {
   from {
-    transform: translate(-100px, -10px) scale(0.9);
-    opacity: 0.3;
+    transform: translate(-198px, -25.5px) scale(0.72);
+    opacity: 0.4;
   }
-
   to {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0, 0) scale(1);
     opacity: 1;
   }
 }
 
 //passive right
 .passive-right-forward {
-  animation: passiveRightF 0.4s none linear;
+  animation: passiveRightF 0.8s ease-in-out;
 }
 
 @keyframes passiveRightF {
   from {
-    transform: translateX(0);
-    opacity: 0.3;
+    transform: scale(1) translateX(0);
+    opacity: 0.4;
   }
   to {
-    transform: translateX(-200px);
-    opacity: 0;
+    transform: scale(0.2) translateX(20px);
+    opacity: 1;
   }
 }
 
 //passive Left
 .passive-left-prev {
-  animation: passiveLeftPrev 0.4s linear none;
+  animation: passiveLeftPrev 0.8s ease-in-out;
 }
 
 @keyframes passiveLeftPrev {
   from {
-    transform: translate(-100px, 20px) scale(0.9);
-    opacity: 1;
+    transform: translate(0) scale(0);
+    opacity: 0;
   }
   to {
-    transform: translate(50px, 10px) scale(1.25);
-    z-index: 999;
-    opacity: 0.8;
+    transform: translate(0, 0px) scale(1);
+    opacity: 0.5;
   }
 }
